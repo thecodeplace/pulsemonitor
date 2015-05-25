@@ -27,20 +27,16 @@
         Drupal.settings.endpoint = "api";
         
         // Perform a System Connect call.
-        system_connect({
-            success:function(result){
-              
-              // Place custom code here...
-              
-              if (Drupal.user.uid == 0) { message = "Hello World, Visitor!"; }
-              else { message = "Hello World, " + Drupal.user.name + "!"; }
-              document.getElementById("message").innerHTML = message;
-              
-            },
-            error:function(xhr, status, message) {
-              alert(message);
-            }
-        });
+        var query = {
+  parameters: {
+    'type': 'article'
+  }
+};
+node_index(query, {
+    success: function(nodes) {
+      alert('Indexed ' + nodes.length + ' node(s)!');
+    }
+});
         
       }
     
