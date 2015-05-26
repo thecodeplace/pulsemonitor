@@ -13,7 +13,7 @@ $(document).ready(function() {
         };
         node_index(query, {
                 success: function(nodes) {
-                console.log(nodes[1].field_patient);
+                console.log(nodes[1]);
       
             }
         });
