@@ -13,7 +13,7 @@ $(document).ready(function() {
         };
         entity_index('entity_node',query, {
                 success: function(nodes) {
-                console.log(nodes[1].field_patient.und[0]);
+                console.log(nodes[1].field_patient.und[0].value);
       
             }
         });
