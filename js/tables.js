@@ -13,7 +13,9 @@ $(document).ready(function() {
         };
         entity_index('entity_node',query, {
                 success: function(nodes) {
-                console.log(nodes[1].field_patient.und[0].value);
+                    for(int i=0;i<nodes.length){
+                        console.log(nodes[i].field_patient.und[0].value);
+                    }
       
             }
         });
