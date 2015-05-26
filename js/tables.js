@@ -11,7 +11,7 @@ $(document).ready(function() {
                 'type': 'article'
             }
         };
-        node_index(query, {
+        entity_index('node',query, {
                 success: function(nodes) {
                 console.log(nodes[1]);
       
