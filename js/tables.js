@@ -36,6 +36,7 @@ $(document).ready(function() {
                 success: function(nodes) {
                     length = nodes.length;
                     console.log(nodes.length);
+                    console.log(nodes);
                     //newdata = new Array(length);
                     for(var i=0;i < nodes.length;i++){
                         var newdata = nodes[i].field_patient.und[0].value;
