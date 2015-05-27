@@ -59,11 +59,7 @@ $(document).ready(function() {
                 barWidth: 43200000
             }
         },
-        xaxis: {
-            mode: "time",
-            timeformat: "%m/%d",
-            minTickSize: [1, "day"]
-        },
+        
         grid: {
             hoverable: true
         },
