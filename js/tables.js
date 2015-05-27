@@ -29,7 +29,8 @@ $(document).ready(function() {
             }
             return arr; 
         }
-        //var newdata;
+        var data;
+        var newdata;
         entity_index('entity_node',query, {
 
                 success: function(nodes) {
