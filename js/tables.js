@@ -27,9 +27,10 @@ $(document).ready(function() {
                         console.log(newdata);
                         data.push(newdata);
                     }
+                    console.log(data.length);
             }
         });
-        console.log(data.length);
+        
         
 
 
