@@ -26,6 +26,6 @@ $(document).ready(function() {
         });
         console.log(numbers.length);
 
-
+        console.log(numbers);
 
 });
