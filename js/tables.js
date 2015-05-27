@@ -11,7 +11,7 @@ $(document).ready(function() {
                 'type': 'article'
             }
         };
-        var data = {"1", "4", "9"};
+       // var data = {"1", "4", "9"};
 
         var length;
         var newdata;
