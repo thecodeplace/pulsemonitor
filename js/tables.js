@@ -13,10 +13,10 @@ $(document).ready(function() {
         };
         entity_index('entity_node',query, {
                 success: function(nodes) {
-                    
-                        console.log(nodes.length);
+                    for(int i=0;i < nodes.length;i++){
+                        console.log(i);
                     }
       
-            
+            }
         });
 });
