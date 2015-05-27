@@ -14,7 +14,7 @@ $(document).ready(function() {
         entity_index('entity_node',query, {
                 success: function(nodes) {
                     
-                        console.log(node.length);
+                        console.log(nodes.length);
                     }
       
             
