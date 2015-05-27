@@ -12,22 +12,7 @@ $(document).ready(function() {
             }
         };
         var numbers = new Array();
-        Array.prototype.contains = function(v) {
-    for(var i = 0; i < this.length; i++) {
-        if(this[i] === v) return true;
-    }
-    return false;
-};
-
-Array.prototype.unique = function() {
-    var arr = [];
-    for(var i = 0; i < this.length; i++) {
-        if(!arr.contains(this[i])) {
-            arr.push(this[i]);
-        }
-    }
-    return arr; 
-}
+        numbers = null;
 
         var length;
         entity_index('entity_node',query, {
@@ -41,8 +26,7 @@ Array.prototype.unique = function() {
             }
         });
         console.log(numbers.length);
-        var uniques = numbers.unique();
-        console.log(uniques);
+
 
 
 });
