@@ -46,8 +46,8 @@ $(document).ready(function() {
                     var uniques = data.unique();
                     console.log(uniques.length);
             }
-        });
-        console.log(data.length+"OUtside");
+        }, function(){console.log(data.length+"Outside");});
+        
         
 
 
