@@ -29,13 +29,13 @@ $(document).ready(function() {
             }
             return arr; 
         }
-        var data;
+        var data = new Array();
         var newdata;
         entity_index('entity_node',query, {
 
                 success: function(nodes) {
                     length = nodes.length;
-                    newdata = new Array(length);
+                    //newdata = new Array(length);
                     for(var i=0;i < nodes.length;i++){
                         console.log(nodes[i].field_patient.und[0].value);
                         var newdata = nodes[i].field_patient.und[0].value;
