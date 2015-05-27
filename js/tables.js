@@ -29,7 +29,7 @@ $(document).ready(function() {
             }
             return arr; 
         }
-        var data = new Array();
+        var data = new Array;
         var newdata;
         entity_index('entity_node',query, {
 
@@ -37,16 +37,24 @@ $(document).ready(function() {
                     length = nodes.length;
                     //newdata = new Array(length);
                     for(var i=0;i < nodes.length;i++){
-                        console.log(nodes[i].field_patient.und[0].value);
                         var newdata = nodes[i].field_patient.und[0].value;
-                        console.log(newdata);
                         data.push(newdata);
                     }
-                    console.log(data.length);
                     var uniques = data.unique();
-                    console.log(uniques.length);
+                    var tableBody = "";
+                    for(var i=0;i<uniques.length;i++){
+                        tableBody += "<tr class=\"odd gradeX\">
+                                            <td>"+uniques[i]+"</td>
+                                            <td>Patient ID</td>
+                                            <td><a href=\"flot.html?patient="+uniques[i]+"\"</td>
+                                            
+                                        </tr>"
+                        $( "#dataTableBody" ).append(tableBody);
+
+                    }
+
             }
-        }, function(){console.log(data.length+"Outside");});
+        });
         
         
 
