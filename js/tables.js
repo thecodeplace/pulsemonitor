@@ -35,18 +35,19 @@ $(document).ready(function() {
 
                 success: function(nodes) {
                     length = nodes.length;
+                    console.log(nodes.length);
                     //newdata = new Array(length);
                     for(var i=0;i < nodes.length;i++){
                         var newdata = nodes[i].field_patient.und[0].value;
                         data.push(newdata);
                     }
-                    var uniques = data.unique();
+                    /*var uniques = data.unique();
                     var tableBody = "";
                     for(var i=0;i<uniques.length;i++){
                         tableBody += "<tr class=\"odd gradeX\"><td>"+uniques[i]+
                         "</td><td>Patient ID</td><td><a href=\"flot.html?patient="+uniques[i]+"\">Click to View BPM Data</a></td></tr>"
                         $( "#dataTableBody" ).append(tableBody);
-                        $(".dataTables_empty").hide();
+                        $(".dataTables_empty").hide();*/
 
                     }
 
