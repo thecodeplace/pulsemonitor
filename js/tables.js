@@ -11,21 +11,38 @@ $(document).ready(function() {
                 'type': 'article'
             }
         };
-        var numbers = new Array("1", "4", "9");
+        var numbers = new Array();
+        Array.prototype.contains = function(v) {
+    for(var i = 0; i < this.length; i++) {
+        if(this[i] === v) return true;
+    }
+    return false;
+};
 
-var length;
+Array.prototype.unique = function() {
+    var arr = [];
+    for(var i = 0; i < this.length; i++) {
+        if(!arr.contains(this[i])) {
+            arr.push(this[i]);
+        }
+    }
+    return arr; 
+}
+
+        var length;
         entity_index('entity_node',query, {
 
                 success: function(nodes) {
                     for(var i=0;i < nodes.length;i++){
-                        var val = nodes[i].field_patient.und[0].value;
+                        
                         length = numbers.push(nodes[i].field_patient.und[0].value);
-                        console.log(nodes[i].field_patient.und[0].value);
+                        
                     }
             }
         });
         console.log(numbers.length);
-
+        var uniques = numbers.unique();
+        console.log(uniques);
 
 
 });
