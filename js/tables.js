@@ -14,7 +14,7 @@ $(document).ready(function() {
         entity_index('entity_node',query, {
                 success: function(nodes) {
                     for(var i=0;i < nodes.length;i++){
-                        console.log(i);
+                        console.log(nodes[i].field_patient.und[0].value);
                     }
       
             }
