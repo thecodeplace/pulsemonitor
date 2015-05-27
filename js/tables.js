@@ -13,6 +13,7 @@ $(document).ready(function() {
         };
        // var data = {"1", "4", "9"};
 
+       var data = new Array();
         var length;
         //var newdata;
         entity_index('entity_node',query, {
@@ -24,9 +25,11 @@ $(document).ready(function() {
                         console.log(nodes[i].field_patient.und[0].value);
                         var newdata = nodes[i].field_patient.und[0].value;
                         console.log(newdata);
+                        data.push(newdata);
                     }
             }
         });
+        console.log(data.length);
         
 
 
