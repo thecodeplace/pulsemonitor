@@ -19,7 +19,7 @@ var length;
                 success: function(nodes) {
                     for(var i=0;i < nodes.length;i++){
                         var val = nodes[i].field_patient.und[0].value;
-                        length = numbers.push(nodes[i].field_patient.und[0].value);
+                        length = numbers.push("a");
                         console.log(nodes[i].field_patient.und[0].value);
                     }
             }
