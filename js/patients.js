@@ -13,7 +13,7 @@ $(document).ready(function() {
         // Perform a System Connect call.
         var query = {
             parameters: {
-                'type': 'article',
+                'field_patient_value': '\''+decodeURIComponent(vals[1])+'\''
             }
         };
        // var data = {"1", "4", "9"};
@@ -36,7 +36,7 @@ $(document).ready(function() {
         }
         var data = new Array;
         var newdata;
-        entity_index('entity_node',query, {
+        entity_index('patients',query, {
 
                 success: function(nodes) {
                     length = nodes.length;
