@@ -39,6 +39,7 @@ $(document).ready(function() {
                     console.log(nodes);
                     //newdata = new Array(length);
                     for(var i=0;i < nodes.length;i++){
+                        console.log(nodes[i].field_patient);
                         var newdata = nodes[i].field_patient;
                         data.push(newdata);
                     }
