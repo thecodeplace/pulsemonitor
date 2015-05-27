@@ -21,7 +21,7 @@ $(document).ready(function() {
                     length = nodes.length;
                     newdata = new Array(length);
                     for(var i=0;i < nodes.length;i++){
-                        newdata[i] = String(nodes[i]);
+                        newdata[i] = nodes[i];
                         console(newdata[i]);
                         console.log(nodes[i].field_patient.und[0].value);
                     }
