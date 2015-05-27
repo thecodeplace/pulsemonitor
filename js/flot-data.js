@@ -76,6 +76,7 @@ $(document).ready(function() {
                         var newdata = [i,nodes[i].BPM];
                         data.push(newdata);
                     }
+                    console.log(data);
                     var barData = {
         label: "bar",
         data: data
