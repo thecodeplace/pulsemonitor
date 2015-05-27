@@ -23,11 +23,8 @@ $(document).ready(function() {
       
             }
         });
-        var unique = a.filter( onlyUnique );
-        console.log(unique);
-        function onlyUnique(value, index, self) { 
-            return self.indexOf(value) === index;
-        }
+        console.log(a.length);
+
 
 
 });
