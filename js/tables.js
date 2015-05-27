@@ -11,12 +11,23 @@ $(document).ready(function() {
                 'type': 'article'
             }
         };
+        var a=[];
         entity_index('entity_node',query, {
+
                 success: function(nodes) {
                     for(var i=0;i < nodes.length;i++){
-                        console.log(nodes[i].field_patient.und[0].value);
+                        a.push(nodes[i].field_patient.und[0].value);
+                        //console.log(nodes[i].field_patient.und[0].value);
+
                     }
       
             }
         });
+        var unique = a.filter( onlyUnique );
+        console.log(unique);
+        function onlyUnique(value, index, self) { 
+            return self.indexOf(value) === index;
+        }
+
+
 });
