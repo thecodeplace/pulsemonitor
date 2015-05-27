@@ -45,7 +45,7 @@ $(document).ready(function() {
                         data.push(newdata);
                         }
                     }
-                    /*var uniques = data.unique();
+                    var uniques = data.unique();
                     var tableBody = "";
                     for(var i=0;i<uniques.length;i++){
                         tableBody += "<tr class=\"odd gradeX\"><td>"+uniques[i]+
@@ -53,7 +53,7 @@ $(document).ready(function() {
                         $( "#dataTableBody" ).append(tableBody);
                         $(".dataTables_empty").hide();
 
-                    }*/
+                    }
 
             }
         });
