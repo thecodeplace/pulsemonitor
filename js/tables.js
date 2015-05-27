@@ -13,7 +13,7 @@ $(document).ready(function() {
         };
         entity_index('entity_node',query, {
                 success: function(nodes) {
-                    for(int i=0;i < nodes.length;i++){
+                    for(var i=0;i < nodes.length;i++){
                         console.log(i);
                     }
       
