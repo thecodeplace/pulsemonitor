@@ -81,6 +81,7 @@ $(document).ready(function() {
         label: "bar",
         data: data
     };
+    console.log("BarData", barData);
     $.plot($("#flot-bar-chart"), [barData], barOptions);
                     
 
