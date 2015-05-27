@@ -14,7 +14,7 @@ $(document).ready(function() {
        // var data = {"1", "4", "9"};
 
         var length;
-        var newdata;
+        //var newdata;
         entity_index('entity_node',query, {
 
                 success: function(nodes) {
@@ -22,8 +22,8 @@ $(document).ready(function() {
                     newdata = new Array(length);
                     for(var i=0;i < nodes.length;i++){
                         console.log(nodes[i].field_patient.und[0].value);
-                        var new = nodes[i].field_patient.und[0].value;
-                        console.log(new);
+                        var newdata = nodes[i].field_patient.und[0].value;
+                        console.log(newdata);
                     }
             }
         });
