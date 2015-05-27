@@ -41,7 +41,7 @@ $(document).ready(function() {
                     for(var i=0;i < nodes.length;i++){
                         if(nodes[i].field_patient!="undefined"){
                         console.log(nodes[i].field_patient.und[0]);
-                        var newdata = nodes[i].field_patient;
+                        var newdata = nodes[i].field_patient.und[0].value;
                         data.push(newdata);
                         }
                     }
