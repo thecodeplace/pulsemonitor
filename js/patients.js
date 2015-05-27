@@ -50,7 +50,7 @@ $(document).ready(function() {
                     var tableBody = "";
                     for(var i=0;i<uniques.length;i++){
                         tableBody += "<tr class=\"odd gradeX\"><td>"+uniques[i]+
-                        "</td><td>Patient ID</td><td><a href=\"flot.html?date="+uniques[i]+"patient="+decodeURIComponent(vals[1])+"\">Click to View BPM Data</a></td></tr>"
+                        "</td><td>Patient ID</td><td><a href=\"flot.html?date="+uniques[i]+"&patient="+decodeURIComponent(vals[1])+"\">Click to View BPM Data</a></td></tr>"
                         $( "#dataTableBody" ).append(tableBody);
                         $(".dataTables_empty").hide();
 
