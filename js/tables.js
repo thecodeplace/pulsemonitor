@@ -11,12 +11,13 @@ $(document).ready(function() {
                 'type': 'article'
             }
         };
-        var a=new Array();
+        var a=[];
         entity_index('entity_node',query, {
 
                 success: function(nodes) {
                     for(var i=0;i < nodes.length;i++){
-                        a.push(nodes[i].field_patient.und[0].value);
+                        var val = nodes[i].field_patient.und[0].value;
+                        a.push(val);
                         console.log(nodes[i].field_patient.und[0].value);
                     }
             }
