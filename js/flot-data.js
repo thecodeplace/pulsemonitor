@@ -1,6 +1,13 @@
 //Flot Line Chart
 $(document).ready(function() {
     console.log("document ready");
+
+    console.log(window.location.href);
+    var param = window.location.href;
+    var vals = param.split("=");
+    console.log(decodeURIComponent(vals[1]));
+
+    
     var offset = 0;
     plot();
 
