@@ -6,9 +6,9 @@ $(document).ready(function() {
     var param = window.location.href;
     var vals = param.split("?");
     var params = vals[1].split("&");
-    console.log(decodeURIComponent(vals[1]));
+    //console.log(decodeURIComponent(vals[1]));
     console.log(decodeURIComponent(params[0]));
-    onsole.log(decodeURIComponent(params[1]));
+    console.log(decodeURIComponent(params[1]));
 
     var offset = 0;
     plot();
