@@ -11,9 +11,9 @@ $(document).ready(function() {
                 'type': 'article'
             }
         };
-        var numbers = new Array("1", "4", "9");
+        var numbers = ["1", "4", "9"];
 
-var length;
+        var length;
         entity_index('entity_node',query, {
 
                 success: function(nodes) {
