@@ -47,7 +47,7 @@ $(document).ready(function() {
                     console.log(uniques.length);
             }
         });
-        
+        console.log(data.length+"OUtside");
         
 
 
