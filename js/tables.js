@@ -11,8 +11,7 @@ $(document).ready(function() {
                 'type': 'article'
             }
         };
-        var numbers = new Array();
-        numbers = null;
+        var numbers = new Array("");
 
         var length;
         entity_index('entity_node',query, {
