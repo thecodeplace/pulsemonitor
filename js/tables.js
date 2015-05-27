@@ -43,12 +43,8 @@ $(document).ready(function() {
                     var uniques = data.unique();
                     var tableBody = "";
                     for(var i=0;i<uniques.length;i++){
-                        tableBody += "<tr class=\"odd gradeX\">
-                                            <td>"+uniques[i]+"</td>
-                                            <td>Patient ID</td>
-                                            <td><a href=\"flot.html?patient="+uniques[i]+"\"</td>
-                                            
-                                        </tr>"
+                        tableBody += "<tr class=\"odd gradeX\"><td>"+uniques[i]+
+                        "</td><td>Patient ID</td><td><a href=\"flot.html?patient="+uniques[i]+"\"</td></tr>"
                         $( "#dataTableBody" ).append(tableBody);
 
                     }
