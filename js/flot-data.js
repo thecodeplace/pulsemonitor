@@ -59,7 +59,10 @@ $(document).ready(function() {
                 barWidth: 43200000
             }
         },
-        
+        xaxis: {
+            min : 1,
+            max : 17
+        },
         grid: {
             hoverable: true
         },
