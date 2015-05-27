@@ -11,7 +11,7 @@ $(document).ready(function() {
                 'type': 'article'
             }
         };
-        var numbers = ["1", "4", "9"];
+        var data = ["1", "4", "9"];
 
         var length;
         entity_index('entity_node',query, {
@@ -19,12 +19,13 @@ $(document).ready(function() {
                 success: function(nodes) {
                     for(var i=0;i < nodes.length;i++){
                         var val = nodes[i].field_patient.und[0].value;
-                        length = numbers.push("a");
+                        data.push( "A" );
+                        data.push( "B", "C" );
                         console.log(nodes[i].field_patient.und[0].value);
                     }
             }
         });
-        console.log(numbers.length);
+        console.log(data.length);
 
 
 
