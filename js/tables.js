@@ -11,16 +11,14 @@ $(document).ready(function() {
                 'type': 'article'
             }
         };
-        var a=[];
+        var a=new Array();
         entity_index('entity_node',query, {
 
                 success: function(nodes) {
                     for(var i=0;i < nodes.length;i++){
                         a.push(nodes[i].field_patient.und[0].value);
                         console.log(nodes[i].field_patient.und[0].value);
-
                     }
-      
             }
         });
         console.log(a.length);
