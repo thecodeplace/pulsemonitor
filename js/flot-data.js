@@ -8,7 +8,9 @@ $(document).ready(function() {
     var params = vals[1].split("&");
     //console.log(decodeURIComponent(vals[1]));
     console.log(decodeURIComponent(params[0]));
+    var dateval = params[0].split("=");
     console.log(decodeURIComponent(params[1]));
+    var patientval = params[1].split("=");
 
     var offset = 0;
     plot();
@@ -21,13 +23,42 @@ $(document).ready(function() {
         // Perform a System Connect call.
         var query = {
             parameters: {
-                'type': 'article'
+                'field_patient_value': '\''+decodeURIComponent(patientval[1])+'\'',
+                'field_date_value' :'\''+decodeURIComponent(dateval[1])+'\''
             }
         };
-        node_index(query, {
+       // var data = {"1", "4", "9"};
+
+       Array.prototype.contains = function(v) {
+        for(var i = 0; i < this.length; i++) {
+            if(this[i] === v) return true;
+            }
+        return false;
+        };
+
+        Array.prototype.unique = function() {
+            var arr = [];
+            for(var i = 0; i < this.length; i++) {
+                if(!arr.contains(this[i])) {
+                arr.push(this[i]);
+                }
+            }
+            return arr; 
+        }
+        var data = new Array;
+        var newdata;
+        entity_index('patients',query, {
+
                 success: function(nodes) {
-                console.log(nodes[1].nid);
-      
+                    length = nodes.length;
+                    console.log(nodes);
+                    //newdata = new Array(length);
+                    for(var i=0;i < nodes.length;i++){
+                        var newdata = nodes[i].BPM;
+                        data.push(newdata);
+                    }
+                    
+
             }
         });
         
