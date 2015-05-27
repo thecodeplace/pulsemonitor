@@ -5,9 +5,11 @@ $(document).ready(function() {
     console.log(window.location.href);
     var param = window.location.href;
     var vals = param.split("=");
+    var params = vals.split("?");
     console.log(decodeURIComponent(vals[1]));
+    console.log(decodeURIComponent(params[0]));
+    onsole.log(decodeURIComponent(params[1]));
 
-    
     var offset = 0;
     plot();
 
