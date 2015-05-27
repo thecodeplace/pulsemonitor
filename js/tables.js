@@ -11,18 +11,20 @@ $(document).ready(function() {
                 'type': 'article'
             }
         };
-        var a=[];
+        var numbers = new Array("1", "4", "9");
+
+var length;
         entity_index('entity_node',query, {
 
                 success: function(nodes) {
                     for(var i=0;i < nodes.length;i++){
                         var val = nodes[i].field_patient.und[0].value;
-                        a.push(val);
+                        length = numbers.push(nodes[i].field_patient.und[0].value);
                         console.log(nodes[i].field_patient.und[0].value);
                     }
             }
         });
-        console.log(a.length);
+        console.log(numbers.length);
 
 
 
