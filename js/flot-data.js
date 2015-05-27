@@ -73,7 +73,7 @@ $(document).ready(function() {
     };
                     //newdata = new Array(length);
                     for(var i=0;i < nodes.length;i++){
-                        var newdata = [nodes[i].BPM,nodes[i].Time];
+                        var newdata = [nodes[i].Time,nodes[i].BPM];
                         data.push(newdata);
                     }
                     var barData = {
