@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
     console.log(window.location.href);
+    var param = window.location.href;
+    var vals = param.split("?");
+    console.log(vals[1]);
+
     Drupal.settings.site_path = "http://www.thecodeplace.com/pulsemonitor_drup"; // http://www.example.com
         
         // Set the Service Resource endpoint path.
