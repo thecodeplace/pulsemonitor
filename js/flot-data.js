@@ -54,9 +54,14 @@ $(document).ready(function() {
                     console.log(nodes);
                     //newdata = new Array(length);
                     for(var i=0;i < nodes.length;i++){
-                        var newdata = nodes[i].BPM;
+                        var newdata = [nodes[i].BPM,nodes[i].Time];
                         data.push(newdata);
                     }
+                    var barData = {
+        label: "bar",
+        data: data
+    };
+    $.plot($("#flot-bar-chart"), [barData], barOptions);
                     
 
             }
@@ -1285,17 +1290,6 @@ $(function() {
             content: "x: %x, y: %y"
         }
     };
-    var barData = {
-        label: "bar",
-        data: [
-            [1354521600000, 1000],
-            [1355040000000, 2000],
-            [1355223600000, 3000],
-            [1355306400000, 4000],
-            [1355487300000, 5000],
-            [1355571900000, 6000]
-        ]
-    };
-    $.plot($("#flot-bar-chart"), [barData], barOptions);
+    
 
 });
