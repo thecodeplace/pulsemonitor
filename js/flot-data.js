@@ -56,12 +56,17 @@ $(document).ready(function() {
         series: {
             bars: {
                 show: true,
+                barWidth : 3600000
             }
         },
         xaxis: {
-            min : 1,
-            max : 17
-        },
+                    mode: "time",//"categories",
+                    timezone: "browser",
+                    tickLength: 0,
+                    min: 1,
+                    max : 17
+
+                }                 
         yaxis: {
             min : 50,
             max : 70
