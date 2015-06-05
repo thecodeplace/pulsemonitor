@@ -54,33 +54,42 @@ $(document).ready(function() {
                     console.log(nodes);
                     var barOptions = {
         series: {
+                bars: {
+                    show: true
+                }
+            },
             bars: {
-                show: true,
-                barWidth : 3600000
+                align: "center",
+                barWidth: 0.5
+            },
+            xaxis: {
+                axisLabel: "World Cities",
+                axisLabelUseCanvas: true,
+                axisLabelFontSizePixels: 12,
+                axisLabelFontFamily: 'Verdana, Arial',
+                axisLabelPadding: 10,
+                ticks: ticks
+            },
+            yaxis: {
+                axisLabel: "Average Temperature",
+                axisLabelUseCanvas: true,
+                axisLabelFontSizePixels: 12,
+                axisLabelFontFamily: 'Verdana, Arial',
+                axisLabelPadding: 3,
+                tickFormatter: function (v, axis) {
+                    return v + "°C";
+                }
+            },
+            legend: {
+                noColumns: 0,
+                labelBoxBorderColor: "#000000",
+                position: "nw"
+            },
+            grid: {
+                hoverable: true,
+                borderWidth: 2,
+                backgroundColor: { colors: ["#ffffff", "#EDF5FF"] }
             }
-        },
-        xaxis: {
-                    mode: "time",//"categories",
-                    timezone: "browser",
-                    tickLength: 0,
-                    min: 1,
-                    max : 17
-
-                },                 
-        yaxis: {
-            min : 50,
-            max : 70
-        },
-        grid: {
-            hoverable: true
-        },
-        legend: {
-            show: false
-        },
-        tooltip: true,
-        tooltipOpts: {
-            content: "x: %x, y: %y"
-        }
     };
                     //newdata = new Array(length);
                     for(var i=0;i < nodes.length;i++){
