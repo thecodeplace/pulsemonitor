@@ -56,7 +56,7 @@ $(document).ready(function() {
                 success: function(nodes) {
                     length = nodes.length;
                     console.log(nodes);
-                    for(var i=0;i < nodes.length;i++){
+                    for(var i=0;i < 10;i++){
                         var newdata = [i,nodes[i].Time];
                         ticks.push(newdata);
                     }
@@ -102,7 +102,7 @@ $(document).ready(function() {
             }
     };
                     //newdata = new Array(length);
-                    for(var i=0;i < nodes.length;i++){
+                    for(var i=0;i < 10;i++){
                         var newdata = [i,nodes[i].BPM];
                         data.push(newdata);
                     }
