@@ -47,11 +47,7 @@ $(document).ready(function() {
         }
         var data = new Array;
         var ticks = new Array;
-        for(var i=0;i < nodes.length;i++){
-                        var newdata = [i,nodes[i].Time];
-                        ticks.push(newdata);
-                    }
-        console.log(ticks);
+        
         var dataset = [{ label: "2012 Average Temperature", data: data, color: "#5482FF" }];
         //var ticks = [[0, "London"], [1, "New York"], [2, "New Delhi"], [3, "Taipei"],[4, "Beijing"], [5, "Sydney"]];
         var newdata;
@@ -60,6 +56,12 @@ $(document).ready(function() {
                 success: function(nodes) {
                     length = nodes.length;
                     console.log(nodes);
+                    for(var i=0;i < nodes.length;i++){
+                        var newdata = [i,nodes[i].Time];
+                        ticks.push(newdata);
+                    }
+                    console.log(ticks);
+
                     var barOptions = {
         series: {
                 bars: {
