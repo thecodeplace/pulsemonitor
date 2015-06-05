@@ -56,7 +56,7 @@ $(document).ready(function() {
         series: {
             bars: {
                 show: true,
-                barWidth: 200
+                barWidth: 10
             }
         },
         xaxis: {
