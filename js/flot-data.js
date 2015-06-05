@@ -56,9 +56,11 @@ $(document).ready(function() {
                 success: function(nodes) {
                     length = nodes.length;
                     console.log(nodes);
+                    var j=9;
                     for(var i=0;i < 10;i++){
-                        var newdata = [i,nodes[i].Time];
+                        var newdata = [j,nodes[i].Time];
                         ticks.push(newdata);
+                        j--;
                     }
                     console.log(ticks);
 
@@ -102,9 +104,11 @@ $(document).ready(function() {
             }
     };
                     //newdata = new Array(length);
+                    var j=9;
                     for(var i=0;i < 10;i++){
-                        var newdata = [i,nodes[i].BPM];
+                        var newdata = [j,nodes[i].BPM];
                         data.push(newdata);
+                        j--;
                     }
                     console.log(data);
                     var barData = {
