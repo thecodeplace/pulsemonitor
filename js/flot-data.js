@@ -66,7 +66,7 @@ $(document).ready(function() {
                     min: 1,
                     max : 17
 
-                }                 
+                },                 
         yaxis: {
             min : 50,
             max : 70
