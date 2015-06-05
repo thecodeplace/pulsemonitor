@@ -79,7 +79,7 @@ $(document).ready(function() {
                 axisLabelFontFamily: 'Verdana, Arial',
                 axisLabelPadding: 3,
                 tickFormatter: function (v, axis) {
-                    return v + "°C";
+                    return v + "BPM";
                 }
             },
             legend: {
