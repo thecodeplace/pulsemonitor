@@ -46,8 +46,14 @@ $(document).ready(function() {
             return arr; 
         }
         var data = new Array;
+        var ticks = new Array;
+        for(var i=0;i < nodes.length;i++){
+                        var newdata = [i,nodes[i].Time];
+                        ticks.push(newdata);
+                    }
+        console.log(ticks);
         var dataset = [{ label: "2012 Average Temperature", data: data, color: "#5482FF" }];
-        var ticks = [[0, "London"], [1, "New York"], [2, "New Delhi"], [3, "Taipei"],[4, "Beijing"], [5, "Sydney"]];
+        //var ticks = [[0, "London"], [1, "New York"], [2, "New Delhi"], [3, "Taipei"],[4, "Beijing"], [5, "Sydney"]];
         var newdata;
         entity_index('patients',query, {
 
