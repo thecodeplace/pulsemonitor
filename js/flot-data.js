@@ -45,7 +45,6 @@ $(document).ready(function() {
             }
             return arr; 
         }
-        var data = [[0, 11],[1, 15],[2, 25],[3, 24],[4, 13],[5, 18]];
         var dataset = [{ label: "2012 Average Temperature", data: data, color: "#5482FF" }];
         var ticks = [[0, "London"], [1, "New York"], [2, "New Delhi"], [3, "Taipei"],[4, "Beijing"], [5, "Sydney"]];
         var newdata;
